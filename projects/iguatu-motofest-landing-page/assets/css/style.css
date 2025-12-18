@@ -1,0 +1,491 @@
+* {
+    box-sizing: border-box;
+}
+
+:root {
+    --primary-color: #2d6e63;
+    --secondary-color: #f4f1de;
+}
+
+body, html {
+    overflow-x: hidden;
+}
+
+h1 { font-size: 2.25rem; }
+h2 { font-size: 2rem; }
+h3 { font-size: 1.75rem; }
+h4 { font-size: 1.5rem; }
+h5 { font-size: 1.25rem; }
+h6 { font-size: 1rem; }
+
+body{
+    background-color: var(--secondary-color);
+    font-family: 'Poppins', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+#root {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100vw;
+  min-height: 100vh;
+}
+
+main section {
+    padding: 12px;
+    margin-bottom: 20px;
+    width: 100%;
+}
+
+header {
+    width: 100%;
+}
+
+.navbar {
+    width: 100%;
+    height: 100%;
+    background-color: var(--primary-color);
+    padding: 10px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.navbar img {
+    width: 70px;
+}
+
+.navbar ul {
+    display: flex;
+    justify-content: space-around;
+    flex-grow: 1;
+    margin-left: 40px;
+    list-style: none;
+    padding: 0;
+    background-color: transparent;
+}
+
+.navbar li {
+    margin: 0 10px;
+}
+
+.navbar a {
+    color: #f4f4ea;
+    text-decoration: none;
+    padding: 10px 15px;
+    display: block;
+    font-size: 18px;
+    font-weight: bold;
+    transition: background 0.3s;
+}
+
+.navbar a:hover {
+    background-color: #193b36;
+    border-radius: 5px;
+}
+
+#sobre-evento {
+    padding: 60px 20px;
+  }
+  
+#sobre-evento .container {
+    margin: 0 auto;
+    display: flex;
+    gap: 40px;
+    align-items: center;
+    flex-wrap: wrap;
+    text-align: center;
+}
+  
+#sobre-evento .imagem img {
+    width: 100%;
+    max-width: 300px;
+    border-radius: 5px;
+    object-fit: cover;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+  
+  
+#sobre-evento .conteudo {
+    flex: 1;
+}
+  
+#sobre-evento .conteudo h2 {
+    font-size: 1.9rem;
+    margin-bottom: 20px;
+    color: #111827;
+  }
+  
+#sobre-evento .conteudo p {
+    font-size: 1rem;
+    color: #374151;
+    line-height: 1.6;
+    margin-bottom: 16px;
+    text-align: justify;
+}
+  
+#sobre-evento .botao {
+    display: block;
+    width: 150px;
+    margin: 24px auto 0;
+    text-align: center;
+    background-color: var(--primary-color);
+    color: #fff;
+    padding: 12px 24px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 500;
+    transition: background-color 0.3s ease;
+}
+  
+  #sobre-evento .botao:hover {
+    background-color: #166534;
+}
+  
+@media (max-width: 768px) {
+    #sobre-evento .container {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    #sobre-evento .imagem img {
+    max-width: 100%;
+    }
+}
+
+.programacao {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.programacao-lista {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  margin-top: 8px;
+}
+
+.programacao-item {
+  width: 30%;
+  min-height: 260px;
+  display: flex;
+  align-items: start;
+  flex-direction: column;
+  background-color: #05bda8;
+  background-image: linear-gradient(180deg, #000000 0%, #05bda8 100%);
+  padding: 1.5rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  color: #fff;
+  gap: 8px;
+  margin-bottom: 16px;
+}
+
+.item-data {
+  display: flex;
+  align-items: start;
+  justify-content: center;
+  gap: 8px;
+}
+
+.item-data span {
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+.item-horarios {
+    display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #fff;
+  border-radius: 50px;
+  font-weight: 700;
+}
+
+.item-horarios span:nth-child(1) {
+  background-color: var(--primary-color);
+  padding: 6px;
+  border-radius: 50px;
+}
+
+.item-horarios span:nth-child(2) {
+    color: var(--primary-color);
+  padding: 6px;
+}
+
+.item-atracoes {
+    display: flex;
+  flex-direction: column;
+  justify-content: center;
+  border-radius: 50px;
+}
+
+.item-atracoes div {
+    display: flex;
+  gap: 4px;
+}
+
+.item-atracoes div span:nth-child(1) {
+    font-weight: 700;
+}
+
+#galeria {
+    color: #ffffe8;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
+    background-color: var(--primary-color);
+ }
+ 
+ /* Responsivo para telas menores (ex: celulares) */
+@media (max-width: 768px) {
+  #galeria {
+      grid-template-columns: 1fr; /* uma coluna só */
+  }
+}
+
+ #imagem-galeria{
+  width: 300px;        
+  height: auto;       
+  display: block; 
+  align-content: center;
+  border-radius: 8px;
+  
+ }
+
+ #titulo-galeria{
+     color: #f4f4ea;
+    background-color: var(--primary-color);
+    margin-top: 5px;
+    margin-bottom: -10px ;
+    padding: 2px;
+    display: block;
+    text-align: center;
+
+ }  
+
+#inscricao {
+  background-color: #ffffff;
+  padding: 60px 20px;
+  border-top: 4px solid var(--primary-color);
+  border-radius: 8px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+#inscricao h2 {
+  color: var(--primary-color);
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+.form-inscricao {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+.form-inscricao label {
+  grid-column: span 2;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 5px;
+}
+
+.form-inscricao input,
+.form-inscricao textarea {
+    grid-column: span 2;
+    padding: 10px 12px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 16px;
+  background-color: #f9fafb;
+  transition: border-color 0.3s, box-shadow 0.3s;
+  width: 100%;
+}
+
+.form-inscricao input:focus,
+.form-inscricao textarea:focus {
+    outline: none;
+  border-color: var(--primary-color);
+  box-shadow: 0 0 0 3px rgba(45, 110, 99, 0.2);
+}
+
+.form-inscricao textarea {
+    resize: vertical;
+}
+
+.form-inscricao button {
+    grid-column: span 2;
+    background-color: var(--primary-color);
+    color: #fff;
+    font-size: 18px;
+    font-weight: bold;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin-top: 10px;
+  width: 100%;
+}
+
+.form-inscricao button:hover {
+    background-color: #193b36;
+}
+
+@media (min-width: 768px) {
+  .form-inscricao label[for="nome"],
+  .form-inscricao input#nome,
+  .form-inscricao label[for="email"],
+  .form-inscricao input#email {
+    grid-column: span 1;
+}
+
+.form-inscricao label[for="mensagem"],
+.form-inscricao textarea#mensagem {
+    grid-column: span 2;
+  }
+}
+
+@media (max-width: 767px) {
+  .form-inscricao {
+    grid-template-columns: 1fr;
+  }
+
+  .form-inscricao label,
+  .form-inscricao input,
+  .form-inscricao textarea,
+  .form-inscricao button {
+    grid-column: span 1 !important;
+  }
+}
+
+ #patrocinadores {
+  text-align: center;
+  padding: 30px 10px;
+}
+
+#patrocinadores h3 {
+  margin-bottom: 20px;
+}
+
+.patro-logo {
+  height: 60px;
+}
+
+footer {
+    width: 100%;
+    color: #f5f5f5;
+    display: grid;
+}
+
+#footer_content {
+    background-color: #171717;
+    display: flex;
+    align-items: center;
+    padding: 1rem 1rem;
+    justify-content: space-between;
+    flex-direction: column;
+    
+}
+
+#footer_contacts p {
+    margin-top: 2rem;
+    text-align: center;
+    font-size: 1.1rem;
+
+}
+
+#footer_social_media {
+    margin-top: 2rem;
+    align-items: center;
+    width: 5rem;
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+}
+
+#footer_social_media i{
+    color: #f4f4ea;
+    font-size: 1.5rem;
+    top: 50
+}
+
+#footer_link {
+    text-decoration: none;
+
+}
+
+#logo_img {
+    position: absolute;
+    border-radius: 50%;
+    left: 16%;
+    width: 100px;
+    height: auto;
+    margin-top: 28px;
+}
+
+@media (max-width: 768px) {
+    .programacao-item {
+        width: 45%;
+    }
+
+    #sobre-evento .container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    #galeria {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .navbar ul {
+        margin-left: 0;
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 480px) {
+    .programacao-item,
+    #galeria {
+        width: 100%;
+        grid-template-columns: 1fr;
+    }
+
+    .form-inscricao {
+        grid-template-columns: 1fr;
+    }
+
+    #logo_img {
+        position: static;
+        margin: 20px auto;
+    }
+
+    .navbar a {
+        padding: 8px;
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 768px) {
+    h1 { font-size: 2rem; }
+    h2 { font-size: 1.75rem; }
+    
+    #sobre-evento .imagem img {
+        max-width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    h1 { font-size: 1.75rem; }
+    h2 { font-size: 1.5rem; }
+}

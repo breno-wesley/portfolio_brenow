@@ -1,9 +1,11 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfolio Breno Wesley</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
     <header>
@@ -12,53 +14,66 @@
         </div>
         <nav>
             <ul>
-                <li><a href="#home">Home</a></li>
+                <li><a href="#sobre">Sobre</a></li>
                 <li><a href="#projetos">Projetos</a></li>
                 <li><a href="#contato">Contato</a></li>
             </ul>
         </nav>
     </header>
-    <section class="hero">
-        <h1>Esse é meu portfolio, pode me chamar de <span>Breno</span></h1>
+    <section id=sobre class="hero">
+        <h1>Esse é meu portfolio, pode me chamar de <span>Breno</span> Wesley</h1>
         <div>
-        <div><img src="imgs/foto_perfil.jpg" alt="foto-perfil"></div>
+        <div class="perfil"><img src="imgs/foto_perfil.jpg" alt="foto-perfil"></div>
         <p id="sobre">
             Atualmente sou estudante de Engenharia da Computação, na UFC de Sobral-CE. E participo do program de Aspirantes do Instituto Alpha Lumen, onde estou aprimorando minhas habilidades em desenvolvimento web e outras tecnologias.
         </p>
+        <div class="logos-tecnologias">
+            <img src="imgs/html.png" alt="HTML5">
+            <img src="imgs/css-3.png" alt="CSS3"> 
+            <img src="imgs/script-java.png" alt="JavaScript">
+            <img src="imgs/figma.png" alt="Figma">
+        </div>
         </div>
     </section>
-    <section class="projects">
+    <section id="projetos" class="projects">
         <div class="cards">
             <div class="card-content">
-                <div clas><img src="imgs/project1.png" alt="Project 1"></div>
-                <h3>Projeto 1</h3>
-                <p>Descrição do projeto 1.</p>
+                <a href="projects/Quest10/projeto_loja_car.html" target="_blank" rel="noopener noreferrer">
+                    <div class="card-image"><img src="imgs/projeto_loja_car.png" alt="Projeto Loja Car"></div>
+                    <h3>Projeto Loja Carros</h3>
+                    <p>Landing page de loja de carros (CSS - Alpha).</p>
+                </a>
             </div>
             <div class="card-content">
-                <div><img src="imgs/project2.png" alt="Project 2"></div>
-                <h3>Projeto 2</h3>
-                <p>Descrição do projeto 2.</p>
+                <a href="projects/quest2/projeto_portfolio.html" target="_blank" rel="noopener noreferrer">
+                    <div class="card-image"><img src="imgs/projeto_portfolio.png" alt="Projeto Portfolio"></div>
+                    <h3>Projeto Portfolio</h3>
+                    <p>Recriação de portfólio (CSS - Alpha).</p>
+                </a>
             </div>
             <div class="card-content">
-                <div><img src="imgs/project3.png" alt="Project 3"></div>
-                <h3>Projeto 3</h3>
-                <p>Descrição do projeto 3.</p>
+                <a href="projects/iguatu-motofest-landing-page/projeto_iguatu.html" target="_blank" rel="noopener noreferrer">
+                    <div class="card-image"><img src="imgs/projeto_iguatu_motofest.png" alt="Iguatu Motofest"></div>
+                    <h3>Iguatu Motofest</h3>
+                    <p>Landing page do evento Iguatu Motofest. (Projeto desenvolvido em equipe no projeto Capacita-CE)</p>
+                </a>
             </div>
 
         </div>
     </section>
     <footer>
-        <div class="footer-content">
+        <div id="contato" class="footer-content">
 
             <div id="logo_footer"><img src="imgs/logo_name.svg" alt="Logo Footer"></div>
             <div class="logos_redes_sociais">
-                <a href="https://www.linkedin.com/in/brenowesley/" target="_blank"><img id="linkedin" src="imgs/linkedin.png" alt="LinkedIn"></a>
-                <a href="https://github.com/brenowesley" target="_blank"><img id="github" src="imgs/github.png" alt="GitHub"></a>
-                <a href="https://www.instagram.com/brenowesley/" target="_blank"><img id="instagram" src="imgs/instagram.png" alt="Instagram"></a>
+                <a href="https://www.linkedin.com/in/breno-wesley-8915191b1/" target="_blank"><img id="linkedin" src="imgs/linkedin.png" alt="LinkedIn"></a>
+                <a href="https://github.com/breno-wesley" target="_blank"><img id="github" src="imgs/github.png" alt="GitHub"></a>
+                <a href="https://www.instagram.com/brenow.dev/" target="_blank"><img id="instagram" src="imgs/instagram.png" alt="Instagram"></a>
             </div>
             <p>&copy; 2025 Breno Wesley. Todos os direitos reservados.</p>
 
         </div>
     </footer>
+    <script src="script.js"></script>
 </body>
 </html>
