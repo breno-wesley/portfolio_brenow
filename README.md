@@ -16,7 +16,7 @@ As principais tecnologias que foram utilizadas para desenvolver o portfólio
 - **Figma** - Design
 
 ### Prototipo
-    [Link Figma](https://www.figma.com/proto/ZkXVzgti4kmIaDlqkwLRQ0/Portif%C3%B3lio---brenow.dev?node-id=11-506&p=f&m=draw&scaling=min-zoom&content-scaling=fixed&page-id=0%3A1&starting-point-node-id=11%3A506&t=7qcCupTVL1GkDRfK-1)
+   - [Link Figma](https://www.figma.com/proto/ZkXVzgti4kmIaDlqkwLRQ0/Portif%C3%B3lio---brenow.dev?node-id=11-506&p=f&m=draw&scaling=min-zoom&content-scaling=fixed&page-id=0%3A1&starting-point-node-id=11%3A506&t=7qcCupTVL1GkDRfK-1)
 
 ## 📧 Contato
 
