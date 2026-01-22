@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfolio Breno Wesley</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="styles/style.css">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
@@ -20,47 +20,49 @@
             </ul>
         </nav>
     </header>
-    <section id=sobre class="hero">
-        <h1>Esse é meu portfolio, pode me chamar de <span>Breno</span> Wesley</h1>
-        <div>
-        <div class="perfil"><img src="imgs/foto_perfil.jpg" alt="foto-perfil"></div>
-        <p id="sobre">
-            Atualmente sou estudante de Engenharia da Computação, na UFC de Sobral-CE. E participo do program de Aspirantes do Instituto Alpha Lumen, onde estou aprimorando minhas habilidades em desenvolvimento web e outras tecnologias.
-        </p>
-        <div class="logos-tecnologias">
-            <img src="imgs/html.png" alt="HTML5">
-            <img src="imgs/css-3.png" alt="CSS3"> 
-            <img src="imgs/script-java.png" alt="JavaScript">
-            <img src="imgs/figma.png" alt="Figma">
-        </div>
-        </div>
-    </section>
-    <section id="projetos" class="projects">
-        <div class="cards">
-            <div class="card-content">
-                <a href="projects/Quest10/projeto_loja_car.html" target="_blank" rel="noopener noreferrer">
-                    <div class="card-image"><img src="imgs/projeto_loja_car.png" alt="Projeto Loja Car"></div>
-                    <h3>Projeto Loja Carros</h3>
-                    <p>Landing page de loja de carros (CSS - Alpha).</p>
-                </a>
+    <main>
+        <section id=sobre class="hero">
+            <h1>Esse é meu portfolio, pode me chamar de <span>Breno</span> Wesley</h1>
+            <div>
+            <div class="perfil"><img src="imgs/foto_perfil.jpg" alt="foto-perfil"></div>
+            <p id="sobre">
+                Atualmente sou estudante de Engenharia da Computação, na UFC de Sobral-CE. E participo do program de Aspirantes do Instituto Alpha Lumen, onde estou aprimorando minhas habilidades em desenvolvimento web e outras tecnologias.
+            </p>
+            <div class="logos-tecnologias">
+                <img src="imgs/html.png" alt="HTML5">
+                <img src="imgs/css-3.png" alt="CSS3"> 
+                <img src="imgs/script-java.png" alt="JavaScript">
+                <img src="imgs/figma.png" alt="Figma">
             </div>
-            <div class="card-content">
-                <a href="projects/quest2/projeto_portfolio.html" target="_blank" rel="noopener noreferrer">
-                    <div class="card-image"><img src="imgs/projeto_portfolio.png" alt="Projeto Portfolio"></div>
-                    <h3>Projeto Portfolio</h3>
-                    <p>Recriação de portfólio (CSS - Alpha).</p>
-                </a>
             </div>
-            <div class="card-content">
-                <a href="projects/iguatu-motofest-landing-page/projeto_iguatu.html" target="_blank" rel="noopener noreferrer">
-                    <div class="card-image"><img src="imgs/projeto_iguatu_motofest.png" alt="Iguatu Motofest"></div>
-                    <h3>Iguatu Motofest</h3>
-                    <p>Landing page do evento Iguatu Motofest. (Projeto desenvolvido em equipe no projeto Capacita-CE)</p>
-                </a>
-            </div>
+        </section>
+        <section id="projetos" class="projects">
+            <div class="cards">
+                <div class="card-content hidden">
+                    <a href="projects/Quest10/projeto_loja_car.html" target="_blank" rel="noopener noreferrer">
+                        <div class="card-image"><img src="imgs/projeto_loja_car.png" alt="Projeto Loja Car"></div>
+                        <h3>Projeto Loja Carros</h3>
+                        <p>Landing page de loja de carros (CSS - Alpha).</p>
+                    </a>
+                </div>
+                <div class="card-content hidden">
+                    <a href="projects/quest2/projeto_portfolio.html" target="_blank" rel="noopener noreferrer">
+                        <div class="card-image"><img src="imgs/projeto_portfolio.png" alt="Projeto Portfolio"></div>
+                        <h3>Projeto Portfolio</h3>
+                        <p>Recriação de portfólio (CSS - Alpha).</p>
+                    </a>
+                </div>
+                <div class="card-content hidden">
+                    <a href="projects/iguatu-motofest-landing-page/projeto_iguatu.html" target="_blank" rel="noopener noreferrer">
+                        <div class="card-image"><img src="imgs/projeto_iguatu_motofest.png" alt="Iguatu Motofest"></div>
+                        <h3>Iguatu Motofest</h3>
+                        <p>Landing page do evento Iguatu Motofest. (Projeto desenvolvido em equipe no projeto Capacita-CE)</p>
+                    </a>
+                </div>
 
-        </div>
-    </section>
+            </div>
+        </section>
+    </main>
     <footer>
         <div id="contato" class="footer-content">
 
@@ -74,6 +76,6 @@
 
         </div>
     </footer>
-    <script src="script.js"></script>
+    <script src="/scripts/script.js"></script>
 </body>
 </html>
