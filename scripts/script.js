@@ -68,3 +68,33 @@ const hiddenElements = document.querySelectorAll('.card-content.hidden');
 
 // Manda o observador vigiar cada um deles
 hiddenElements.forEach((el) => observer.observe(el));
+
+// Efeito de máquina de escrever com destaque em "Wesley"
+function typeWriterEffect() {
+    const target = document.querySelector('.typing-target');
+    const cursor = document.querySelector('.cursor');
+    
+    // Se não achar os elementos, para a função (evita erros)
+    if (!target || !cursor) return;
+
+    const text = target.getAttribute('data-text');
+    let charIndex = 0;
+    const typingSpeed = 100; // Velocidade em milissegundos (menor = mais rápido)
+
+    function type() {
+    if (charIndex < text.length) {
+        target.textContent += text.charAt(charIndex);
+        charIndex++;
+        setTimeout(type, typingSpeed);
+    }else 
+        {
+            cursor.classList.add('done'); 
+        }
+    }
+
+    // Inicia a digitação com um pequeno atraso inicial
+    setTimeout(type, 500);
+}
+
+// Chama a função quando o site carregar
+document.addEventListener('DOMContentLoaded', typeWriterEffect);
