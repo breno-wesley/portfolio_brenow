@@ -211,7 +211,7 @@ nav a:hover::after {
 
 .logo img {
     width: 70px;
-    height: auto;
+    height: 80%;
 }
 .logo{
     display: flex;
@@ -299,7 +299,7 @@ nav a:hover {
 .card-content::after {
     content: '';
     position: absolute;
-    height: 3px;
+    height: 5px;
     width: 100%; /* Ocupa a largura total, mas começa invisível pelo scale */
     background-color: var(--color-orange);
     left: 0;
@@ -366,11 +366,12 @@ nav a:hover {
 #logo_footer img{
     width: 150px;
 }
-.logos_redes_sociais img{
+.logos_redes_sociais img {
     width: 30px;
     height: 30px;
     filter: invert(48%) sepia(91%) saturate(1215%) hue-rotate(2deg) brightness(104%);
     transition: filter 0.3s ease;
+    animation: flutuar 3s ease-in-out infinite;
 }
 
 .logos_redes_sociais a:hover img{
@@ -404,9 +405,10 @@ nav a:hover {
 .logos-tecnologias img:nth-child(3) { animation-delay: 1s; }
 .logos-tecnologias img:nth-child(4) { animation-delay: 1.5s; }
 
-.logos_redes_sociais img:nth-child(1) { animation-delay: 0s; }
-.logos_redes_sociais img:nth-child(2) { animation-delay: 0.5s; }
-.logos_redes_sociais img:nth-child(3) { animation-delay: 1s; }
+.logos_redes_sociais a:nth-child(1) img { animation-delay: 0s; }
+.logos_redes_sociais a:nth-child(2) img { animation-delay: 0.5s; }
+.logos_redes_sociais a:nth-child(3) img { animation-delay: 1s; }
+
 
 
 /* --- Ajustes para Mobile (Celular) --- */
