@@ -109,7 +109,94 @@ nav a:hover::after {
 
 .projects{
     background-color: var(--color-light-gray);
+    background-color: var(--color-light-gray); /* Fundo cinza */
+    position: relative; /* Essencial para prender as waves aqui */
+    width: 100%;
+    
+    /* Importante: Ocupar espaço em telas grandes */
+    flex: 1; 
+    
+    /* Espaço extra embaixo para a onda não cobrir os cards */
+    padding-bottom: 150px; 
+    
+    /* Remove a margem padrão para colar no footer */
+    margin-bottom: 0;
 
+}
+
+.waves-container {
+    position: absolute;
+    bottom: 0; /* Cola na parte de baixo da seção cinza */
+    left: 0;
+    width: 100%;
+    height: 150px; /* Altura da área da onda */
+    overflow: hidden;
+    line-height: 0;
+    z-index: 5;
+    
+    /* Remova o transform antigo, não precisamos mais subir a onda */
+    transform: none; 
+}
+
+/* Ajuste na WAVE para ela "nascer" de baixo */
+.wave {
+    width: 200%;
+    height: 200vw;
+    position: absolute;
+    /* Aumentei um pouco para garantir que cubra a emenda com o footer */
+    bottom: -190vw; 
+    left: -50%;
+    border-radius: 45%; /* Use aquele formato irregular que passei antes se quiser */
+    transform-origin: center;
+    background-color: var(--color-dark-blue); /* A onda é AZUL para conectar com o footer */
+    animation: drift 15s infinite linear;
+}
+.wave1 {
+    opacity: 1;
+    z-index: 15;
+    /* Mais rápida */
+    animation-duration: 12s; 
+    /* Formato irregular: faz a onda parecer "bater" mais */
+    border-radius: 48% 42% 48% 40%; 
+}
+
+/* ONDA 2: A do meio (Semi-transparente) */
+.wave2 {
+    opacity: 0.5;
+    z-index: 10;
+    /* Muito lenta */
+    animation-duration: 23s; 
+    /* Deslocada para a esquerda: o pico acontece em momentos diferentes */
+    left: -55%; 
+    bottom: -197vw;
+    /* Formato bem "amassado" */
+    border-radius: 40% 45% 42% 46%; 
+}
+
+/* ONDA 3: A de fundo (Laranja) */
+.wave3 {
+    opacity: 0.2;
+    z-index: 5;
+    /* Velocidade média */
+    animation-duration: 17s; 
+    background-color: var(--color-orange);
+    /* Deslocada para a direita */
+    left: -45%; 
+    bottom: -194vw;
+    /* Formato quase circular, mas levemente oval */
+    border-radius: 43% 47% 44% 46%; 
+}
+
+@keyframes drift {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}
+
+/* Ajuste para telas muito grandes */
+@media (min-width: 1200px) {
+    .wave {
+        bottom: -192vw; /* Ajuste fino da altura da onda em telas largas */
+    }
 }
 
 .card-content.hidden {
@@ -177,6 +264,7 @@ nav a:hover {
     padding: 40px 20px;
     max-width: var(--max-width);
     margin: 0 auto;
+    z-index: 1;
 }
 /* --- Estilos do Card --- */
 .card-content {
@@ -187,7 +275,7 @@ nav a:hover {
     width: 300px;
     text-align: center;
     position: relative; /* Essencial para as linhas funcionarem */
-    z-index: 1; /* Cria um contexto de empilhamento novo */
+    z-index: 20; /* Cria um contexto de empilhamento novo */
     
     /* Animação do MOVIMENTO do card (subir e sombra) */
     transition: transform 0.35s cubic-bezier(.22,.9,.31,1), box-shadow 0.35s ease;
@@ -215,7 +303,7 @@ nav a:hover {
     width: 100%; /* Ocupa a largura total, mas começa invisível pelo scale */
     background-color: var(--color-orange);
     left: 0;
-    z-index: 10; /* Garante que fique POR CIMA da imagem */
+    z-index: 4; /* Garante que fique POR CIMA da imagem */
     
     /* O Segredo: Começa com escala 0 (invisível) e cresce a partir do centro */
     transform: scaleX(0); 
@@ -422,7 +510,9 @@ nav a:hover {
     .container-hero { gap: 100px; }
 
     /* Cards */
-    .cards { gap: 80px; }
+    .cards { 
+        gap: 80px; 
+    }
     .card-content { 
         width: 700px; /* Cards enormes para acompanhar a tela */
         border-radius: 20px;
@@ -435,3 +525,10 @@ nav a:hover {
     .logos-tecnologias img { width: 100px; height: 100px; }
     .logos_redes_sociais img { width: 60px; height: 60px; }
 }
+@media (min-width: 850px) {
+    .waves-container {
+        height: 100vh; /* Altura da área da onda */
+    }
+}
+
+
